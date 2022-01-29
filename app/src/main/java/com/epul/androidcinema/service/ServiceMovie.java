@@ -8,7 +8,7 @@ import retrofit2.http.GET;
 
 public interface ServiceMovie {
 
-    @GET("movie")
+    @GET("movies")
     Call<List<Movie>> getMovies();
 
 }

@@ -15,7 +15,7 @@ import java.util.Date;
         "release_date",
         "budget",
         "revenue_amount",
-        "category",
+        //"category",
         "director"
 })
 public class Movie implements java.io.Serializable {
@@ -32,29 +32,29 @@ public class Movie implements java.io.Serializable {
     private int budget;
     @JsonProperty("revenue_amount")
     private int revenue_amount;
-    @JsonProperty("category")
-    private Category category;
+    //@JsonProperty("category")
+    //private Category category;
     @JsonProperty("director")
     private Director director;
 
-    public Movie(long id, String title, int duration, Date release_date, int budget, int revenue_amount, Category category, Director director) {
+    public Movie(long id, String title, int duration, Date release_date, int budget, int revenue_amount, Director director) {
         this.id = id;
         this.title = title;
         this.duration = duration;
         this.release_date = release_date;
         this.budget = budget;
         this.revenue_amount = revenue_amount;
-        this.category = category;
+        //this.category = category;
         this.director = director;
     }
 
-    public Movie(String title, int duration, Date release_date, int budget, int revenue_amount, Category category, Director director) {
+    public Movie(String title, int duration, Date release_date, int budget, int revenue_amount, Director director) {
         this.title = title;
         this.duration = duration;
         this.release_date = release_date;
         this.budget = budget;
         this.revenue_amount = revenue_amount;
-        this.category = category;
+        //this.category = category;
         this.director = director;
     }
 
@@ -117,7 +117,7 @@ public class Movie implements java.io.Serializable {
     public void setRevenue_amount(int revenue_amount) {
         this.revenue_amount = revenue_amount;
     }
-
+/*
     @JsonProperty("category")
     public Category getCategory() {
         return category;
@@ -127,7 +127,7 @@ public class Movie implements java.io.Serializable {
     public void setCategory(Category category) {
         this.category = category;
     }
-
+*/
     @JsonProperty("director")
     public Director getDirector() {
         return director;

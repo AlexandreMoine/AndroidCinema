@@ -82,6 +82,9 @@ public class ActivityConnexion extends AppCompatActivity implements View.OnClick
             call.enqueue(new Callback<Object>() {
                 @Override
                 public void onResponse(Call<Object> call, Response<Object> uneReponse) {
+                    System.out.println("successful : " + uneReponse.isSuccessful());
+                    System.out.println("headers : " + uneReponse.headers());
+                    System.out.println("body : " + uneReponse.body());
                     if (uneReponse.isSuccessful()) {
                         //Recupérer le corps de la reponse que Retrofit s'est chargé de désérialiser à notre place l'aide du convertor Gson
                         if (uneReponse.body() != null) {
@@ -90,7 +93,7 @@ public class ActivityConnexion extends AppCompatActivity implements View.OnClick
                             JSONObject unJSO = null;
                             try {
                                 unJSO = new JSONObject(jsonString);
-                                String unToken = unJSO.getString("token");
+                                String unToken = unJSO.getString("accessToken");
                                 Toast.makeText(ActivityConnexion.this, "Authentification réussie !!!", Toast.LENGTH_LONG).show();
                                 stocke(unToken);
                             } catch (JSONException e) {
@@ -121,6 +124,7 @@ public class ActivityConnexion extends AppCompatActivity implements View.OnClick
 
     // retour vers  les informations à la fenêtre principale
     private void stocke(String unTk) {
+        System.out.println("stocke() : " + unTk);
         int retour = 1;
         Intent intent = new Intent(ActivityConnexion.this, MainActivity.class);
         intent.putExtra("unToken", unTk);

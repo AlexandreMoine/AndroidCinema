@@ -56,10 +56,10 @@ public class ObjetAdapter extends ArrayAdapter<Movie> {
         txtmovieRevenueAmount.setText(item.getRevenue_amount()+ "   ");
 
         TextView txtCategory = (TextView) itemLayout.findViewById(R.id.txtCategory);
-        txtCategory.setText(item.getCategory().getName()+ "   ");
+        //txtCategory.setText(item.getCategory().getName()+ "   ");
 
         TextView txtDirector = (TextView) itemLayout.findViewById(R.id.txtDirector);
-        txtDirector.setText(item.getDirector().getFirstname() + " " + item.getDirector().getLastname() + "   ");
+        //txtDirector.setText(item.getDirector().getFirstname() + " " + item.getDirector().getLastname() + "   ");
 
         return itemLayout;
     }

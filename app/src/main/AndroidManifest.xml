@@ -19,6 +19,9 @@
             android:name=".presentation.ActivityConnexion"
             android:exported="true" />
         <activity
+            android:name=".presentation.ActivityMovie"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

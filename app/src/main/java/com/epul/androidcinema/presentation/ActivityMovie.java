@@ -92,6 +92,7 @@ public class ActivityMovie extends AppCompatActivity implements View.OnClickList
                         //Recupérer le corps de la reponse que Retrofit s'est chargé de désérialiser à notre place l'aide du convertor Gson
                         if (uneReponse.body() != null) {
                             movies = uneReponse.body();
+                            System.out.println("movies = " + movies);
                             affiche(movies);
                         } else {
                             Toast.makeText(ActivityMovie.this, "Erreur d'appel!", Toast.LENGTH_LONG).show();

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.epul.androidcinema.presentation.ActivityConnexion;
+import com.epul.androidcinema.presentation.ActivityMovie;
 import com.epul.androidcinema.service.SessionManager;
 
 
@@ -64,14 +65,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, ActivityConnexion.class);
             startActivityForResult(intent, 1);
         }  else if (v == btnListerClients) {
-            /*
+
             String unToken = uneSession.fetchAuthToken();
             String autho = "Bearer " + unToken;
 
-            Intent intent = new Intent(MainActivity.this, ActivityAfficheClient.class);
+            Intent intent = new Intent(MainActivity.this, ActivityMovie.class);
             intent.putExtra("autho", autho);
             startActivityForResult(intent, 0);
-             */
+
         }
         else if (v == btnAjouter) {
             /*
