@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
-        android:text="Cerisaie"
+        android:text="Cinéma Polytech 2022"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,8 +30,8 @@
 
     <Button
         android:id="@+id/btConnexion"
-        android:layout_width="104dp"
-        android:layout_height="wrap_content"
+        android:layout_width="132dp"
+        android:layout_height="54dp"
         android:layout_marginStart="60dp"
         android:text="Connexion"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="33dp"
-        android:text="Liste des Clients Cerisaie"
+        android:text="Liste des films du cinéma"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintBottom_toTopOf="@+id/btConnexion"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
-        android:text="ListerClients"
+        android:text="Lister films"
         app:layout_constraintBaseline_toBaselineOf="@+id/btAjouter"
         app:layout_constraintStart_toStartOf="parent" />
 

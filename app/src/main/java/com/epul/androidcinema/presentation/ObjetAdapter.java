@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.epul.androidcinema.R;
+import com.epul.androidcinema.domain.Category;
 import com.epul.androidcinema.domain.Movie;
 
 import java.util.List;
@@ -47,19 +48,31 @@ public class ObjetAdapter extends ArrayAdapter<Movie> {
         txtmovieDuration.setText(item.getDuration()+ "   ");
 
         TextView txtmovieReleaseDate = (TextView) itemLayout.findViewById(R.id.txtmovieReleaseDate);
-        txtmovieReleaseDate.setText(item.getRelease_date()+ "   ");
+        txtmovieReleaseDate.setText(item.getReleaseDate()+ "   ");
 
-        TextView txtmovieBudget = (TextView) itemLayout.findViewById(R.id.txtmovieBudget);
-        txtmovieBudget.setText(item.getBudget()+ "   ");
+        //TextView txtmovieBudget = (TextView) itemLayout.findViewById(R.id.txtmovieBudget);
+        //txtmovieBudget.setText(item.getBudget()+ "   ");
 
-        TextView txtmovieRevenueAmount = (TextView) itemLayout.findViewById(R.id.txtmovieRevenueAmount);
-        txtmovieRevenueAmount.setText(item.getRevenue_amount()+ "   ");
+        //TextView txtmovieRevenueAmount = (TextView) itemLayout.findViewById(R.id.txtmovieRevenueAmount);
+        //txtmovieRevenueAmount.setText(item.getRevenue_amount()+ "   ");
 
         TextView txtCategory = (TextView) itemLayout.findViewById(R.id.txtCategory);
-        //txtCategory.setText(item.getCategory().getName()+ "   ");
+        if(item.getCategories().isEmpty()) {
+            txtCategory.setText("");
+        } else {
+            String txtC = "";
+            for(Category c : item.getCategories()) {
+                txtC += c.getName() + "-";
+            }
+            txtC = txtC.substring(0, txtC.length() - 1);
+            txtCategory.setText(txtC);
+        }
 
         TextView txtDirector = (TextView) itemLayout.findViewById(R.id.txtDirector);
-        //txtDirector.setText(item.getDirector().getFirstname() + " " + item.getDirector().getLastname() + "   ");
+        if(item.getDirector() != null)
+            txtDirector.setText(item.getDirector().getFirstname() + " " + item.getDirector().getLastname());
+        else
+            txtDirector.setText("");
 
         return itemLayout;
     }

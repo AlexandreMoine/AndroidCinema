@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="47dp"
-        android:text="Connexion Cerisaie"
+        android:text="Connexion Cinéma"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
         android:layout_marginTop="112dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="113dp"
-        android:text="Login :"
+        android:text="Adresse e-mail :"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toBottomOf="@+id/edPwd"
         app:layout_constraintEnd_toEndOf="@+id/motpasse"
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="119dp"
         android:layout_marginBottom="29dp"
-        android:text="Sign In"
+        android:text="Se connecter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -66,6 +66,12 @@ public class ActivityConnexion extends AppCompatActivity implements View.OnClick
             LoginParam unLogin = new LoginParam(nom, pwd);
             controleUtilisateur(unLogin);
         }
+
+        if(v == btAnnuler) {
+            setResult(Activity.RESULT_OK, intent);
+            //super.finish();
+        }
+
     }
 
     public void controleUtilisateur(LoginParam unLogin) {
